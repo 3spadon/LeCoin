@@ -1,6 +1,6 @@
 <?php $title = 'Le Coin | Connexion'; ?>
-
-<?php ob_start(); ?>
+<!-- Commentaire -->
+<?php ob_start(); ?> 
 <div id="grid_loginForm">
     <div class="panel">
         <div class="panel_heading">
