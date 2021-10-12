@@ -1,0 +1,305 @@
+/** Ajout d"une police de caractères **/
+@font-face {
+	font-family: "Robotomono";
+	src: url('RM-Reg.ttf');
+}
+
+@font-face {
+	font-family: "RobotomonoThin";
+	src: url('RM-Thin.ttf');
+}
+
+body{
+    margin-left:1em;
+    margin-right:1em;
+}
+/****** HEADER *******/
+
+header{
+    display: flex;
+    margin-left:35px;
+}
+
+nav{
+    display: flex;
+    margin-left:30px;
+}
+
+nav a {
+    font-size:1em;
+    padding-top:59px;
+    padding-left:15px;
+    padding-right:15px;
+    text-decoration: none;
+    font-family: 'Robotomono';
+    color:black;
+}
+
+nav a:hover{
+    font-weight: bolder;
+}
+
+header h1{
+    font-family: "Robotomono", sans-serif;
+    font-size: 35pt;
+    font-weight: bold;
+}
+
+header h1 a{
+    color:black;
+}
+
+nav > a:hover{
+    text-decoration: none;
+}
+
+#header_hr{
+width: 97%;
+color:#E0E7ED;
+}
+
+b#lienConnexion{
+    font-family: 'Robotomono', sans-serif;
+    margin-bottom: -4px;
+}
+
+/****** GENERAL ******/
+
+main{
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right:2em;
+}
+
+a{
+    color:#28AFB0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#0A100D;
+}
+
+h2,h3{
+    font-family: "Robotomono", sans-serif;
+}
+
+h2{
+    padding-left: 1em;
+}
+
+#main_header{
+display: flex;
+}
+
+#main_header > form {
+    width:40%;
+    margin-left: 1em;
+    margin-top: 30px;
+}
+#inpK{
+    width:70%;
+    height: 1.5em;
+}
+
+#btnK{
+    height: 2em;
+    width: 5%;
+}
+
+.paddingRightIcon{
+    padding-right: 10px;
+}
+
+#fixedContainer
+{
+    background-color:rgb(241, 241, 241);
+    border: 1px solid #36434d;
+    position: fixed;
+    width: 100px;
+    border-radius: 5px;
+    margin-top: -5px;
+    height: 30px;
+    left: 70%;
+    top: 0%;
+    margin-left: 15%; /*half the width*/
+    padding:5px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/***** FOOTER *******/
+
+#footer_hr{
+    width: 97%;
+    color:#E0E7ED;
+}
+
+/*** listPostView ***/
+
+.trends:first-child{
+    margin-top: 2em;
+}
+
+#iconJournal{
+    padding-right: 10px;
+    font-size: 1.6em;
+}
+
+#iconPencil{
+    padding-right: 10px;
+    font-size: 1.6em;
+}
+
+#lienAjouterEntree{
+    color:black;
+}
+
+#lienAjouterEntree h2:hover{
+    color:#28AFB0;
+}
+/***** postView ******/
+
+#billet{
+    display: grid;
+    grid-template-columns: 1fr 70% 1fr;
+}
+
+#iconCalendar{
+    padding-right: 5px;
+}
+
+#contenuBillet{
+    grid-column: 2/3;
+}
+
+#navBillets{
+    grid-column:2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 15px;
+}
+#billetSuivant{
+    text-align: right;
+    grid-column: 3/4;
+}
+
+#lcarret{
+    padding-right:5px;
+}
+    
+#leftArrow{
+    padding-right:5px;
+}
+    
+#rightArrow{
+    padding-left:5px;
+}
+
+.trashcan{
+    padding-right: 5px;
+}
+
+/*==========================*/
+/*         newPost          */
+/*==========================*/
+
+#grid_newPost{
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+}
+
+.panel{
+    border: 1px solid;
+    border-color: #E0E7ED;
+    color:#36434d;
+    padding-top: 0rem;
+    padding-right: 3rem;
+    padding-bottom: 1.5rem;
+    padding-left: 3rem;
+    border-radius: 5px;
+    grid-column: 2/3;
+}  
+.champDateFormulaire{
+    display: inline-flex; 
+}
+
+#dateArticle{
+    margin-left: 5px;
+    width:76px;
+}
+
+.inpArticle{
+    margin-top:5px;
+    padding:3px;
+}
+
+.btnDates{
+    margin-left: 5px;
+}
+
+.champsTexteFormulaire{
+    width:100%;
+}
+
+#btnAvHier{
+    width:140px;
+}
+
+form>textarea{
+    height: 12em;
+}
+
+#check_aPublier{
+    margin-top:5px;
+}
+
+#btn_sauvegarderArticle{
+    margin-top:10px;
+    padding: 0.5em 2em;
+}
+
+/*==========================*/
+/*        deletePost        */
+/*==========================*/
+
+#grid_confirmDeletePost{
+    display: grid;
+    grid-template-columns: 1fr 40% 1fr;
+}
+
+#txt_confirmDelete{
+    text-align: center;
+}
+
+#btns_confirm{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#btn_annuler{
+    grid-column: 3/4;
+}
+
+/*==========================*/
+/*    Esprits Celestes      */
+/*==========================*/
+
+.titrePrincipal{
+    font-family: 'Robotomono', sans-serif;
+}
+
+#th_grid{
+    display: grid;
+    grid-template-columns: 1fr 70% 1fr;
+}
+
+#th_main{
+    grid-column: 2/3;
+}
+
+#img_archanges{
+    width: 60%;
+    text-align: center;
+}
