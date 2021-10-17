@@ -13,6 +13,25 @@ function dbConnect()
     }
 }
 
+function formLogin($username,$password)
+{
+    $db = dbConnect();
+    $req = $db->prepare('SELECT * FROM users WHERE `username` = ?');
+    $req->execute(array($username));
+    $user = $req->fetch();
+    $password=sha1($password);
+    if($user && $password==$user['password'])
+    {
+        session_start();
+        $_SESSION['auth'] = $user;
+        header('Location: index.php');
+    }
+    else
+    {
+        header("Location:login.php?err=1");
+    }
+}
+
 function getTrends()
 {
     $db = dbConnect();

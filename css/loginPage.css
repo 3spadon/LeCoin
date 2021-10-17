@@ -1,0 +1,116 @@
+/** Ajout d"une police de caractères **/
+@font-face {
+	font-family: "Robotomono";
+	src: url('RM-Reg.ttf');
+}
+
+@font-face {
+	font-family: "RobotomonoThin";
+	src: url('RM-Thin.ttf');
+}
+
+body
+{
+    background-color: rgb(241, 241, 241);
+}
+
+#main
+{
+    display: grid;
+    grid-template-columns: 1fr 35% 1fr;
+    grid-template-rows: 10% 40% 1fr;
+}
+
+#lienRetourAccueil
+{
+    text-decoration: none;
+    color:black;
+    font-family: 'Robotomono';
+}
+
+#lienRetourAccueil:hover{
+    color:#28AFB0;
+}
+
+#icon_arrow{
+    padding-right: 5px;
+}
+#boxLogin
+{
+    background-color: white;
+    border:1px solid lightgrey;
+    border-radius: 10px;
+    width:100%;
+    height:340px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-top: 10%;
+}
+
+#formLogin{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 10px 1fr 23px 30px 15px 23px 30px 15px 30px 10px 10px 20px;
+}
+
+#titre
+{   
+    text-align: center;
+    font-family: 'Robotomono';
+    font-size: 30pt;
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+form > label {
+    font-family: 'Robotomono';
+}
+
+#lbl_username
+{
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+
+#inp_username
+{
+    grid-column: 2/4;
+    grid-row: 4/5;
+}
+
+#lbl_password
+{
+    grid-column: 2/4;
+    grid-row: 6/7;
+}
+
+#inp_password
+{
+    grid-column: 2/4;
+    grid-row: 7/8;
+}
+
+#btn_submitLogin
+{
+    grid-column: 3/4;
+    grid-row: 9/10;
+}
+
+#err
+{
+    grid-column: 2/4;
+    grid-row: 11/12;
+    font-family: 'Robotomono';
+    font-size: 10pt;
+    color:darkred;
+}
+
+#err > i{
+    color:darkorange;
+}
+
+#warningCircle
+{
+    margin-right: 5px;
+    font-size: 13pt;
+}

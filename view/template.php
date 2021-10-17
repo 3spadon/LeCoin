@@ -6,7 +6,7 @@
     <title><?= $title ?></title>
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/fawesome.css" rel="stylesheet" />
- 
+    <link href="css/button.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -20,7 +20,9 @@
             <a id='lienShellcoding' href='www/'>Shellcoding</a>
         </nav>
     </header>
-    <div id="fixedContainer"><a href='index.php?action=viewLogin'><b id='lienConnexion'>Connexion</b></a></div>
+    <?php
+        require('view/loginTab.php');
+    ?>
     <hr id="header_hr">
     <main>
         <?= $content ?>

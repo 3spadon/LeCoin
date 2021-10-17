@@ -24,8 +24,17 @@ try{
                 menu_theologie(); 
         }
 
-        elseif ($_GET['action'] == 'viewLogin') {
-            viewLogin();
+        elseif ($_GET['action'] == 'login') {
+            if (!empty($_POST['username']) && !empty($_POST['password'])) 
+            {
+                $username=$_POST['username'];
+                $password=$_POST['password'];
+                formLogin($username,$password);
+            }
+            else
+            {
+                throw new Exception('tous les champs ne sont pas remplis !');
+            }
         }
 
         elseif ($_GET['action'] == 'theo') {

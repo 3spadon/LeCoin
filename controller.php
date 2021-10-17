@@ -2,6 +2,34 @@
 
 require('model/model.php');
 
+function needLogin()
+{
+    session_start();
+    if(isset($_SESSION['auth']))
+    {
+       
+    }
+    else
+    {
+        if($_GET['err']==2){
+            //In case no user is logged in. Avoiding infinite loop !
+        }
+        else{
+            header('Location: login.php?err=2');
+        }
+    }
+}
+
+function displayAccount()
+{
+    require('view/displayAccount.php');
+}
+
+function displayChangePassword()
+{
+    require('view/changePassword.php');
+}
+
 function listTrends()
 {
     $posts = getTrends();
@@ -94,11 +122,6 @@ function deletePost($id)
 {
     deletePostFromDatabase($id);
     header('Location: index.php?action=listPosts');
-}
-
-function viewLogin()
-{
-    require('view/formLogin.php');
 }
 
 function menu_theologie()
