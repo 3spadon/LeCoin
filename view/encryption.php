@@ -16,19 +16,17 @@
             <img id="userCircleIcon" src='img/user.png' alt='user_circle_icon'><h2 id="username"><?=$_SESSION['auth']['username']?></h2>
         </div>
         <div id="boxContent">
-        <form method="POST" action="" id='form_ChangePassword'>
-            <?php require('view/err_changePassword.php');?>
-            <?= $error ?>
-                <label for="currentPassword" id="lbl_currentPassword">Mot de passe actuel</label>
-                <input type="password" id="inp_currentPassword" name='currentPassword'>
+            <form method="POST" action="" id='form_Encryption'>
+            <?php 
+            // require('view/err_encryption.php');
+            ?>
+                <label for="key" id="lbl_key">Clé de chiffrement [#1]</label>
+                <input type="text" id="inp_key" name='key' value="<?= $cleChiffrement['cle'] ?>" disabled>
 
-                <label for="newPassword" id="lbl_newPassword">Nouveau mot de passe</label>
-                <input type="password" id="inp_newPassword" name='newPassword'>
+                <label for="keyBis" id="lbl_keyBis">Clé de chiffrement [#2]</label>
+                <input type="text" id="inp_keyBis" name='newPassword' value="<?= $cleChiffrement['cleBis'] ?>" disabled>
 
-                <label for="newPasswordBis" id="lbl_newPasswordBis">Répéter mot de passe</label>
-                <input type="password" id="inp_newPasswordBis" name='newPasswordBis'>
-
-                <button action='submit' id='btn_submitChangePassword'>Valider</button>
+                <!-- <button action='submit' id='btn_submitKeys'>Valider</button> -->
             </form>
         </div>
     </div>

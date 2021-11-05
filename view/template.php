@@ -13,7 +13,7 @@
     <header>
         <h1><a href='index.php'>{Le Coin}.</a></h1>
         <nav>
-            <a id='lienJournal' href='index.php'>Journal</a>
+            <a id='lienJournal' href='index.php?action=listPosts'>Journal</a>
             <a id='lienReves' href='index.php?action=listDreams'>Rêves</a>
             <a id='lienLivres' href='www/'>Livres</a>
             <a id='lienTheologie' href='index.php?action=viewTheologie'>Théologie</a>

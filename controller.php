@@ -30,6 +30,13 @@ function displayChangePassword()
     require('view/changePassword.php');
 }
 
+function displayEncryption()
+{
+    $cleChiffrement = getkey($_SESSION['auth']['username']);
+    $_SESSION['Kles']['cle']=$cleChiffrement['cle'];
+    $_SESSION['Kles']['cleBis']=$cleChiffrement['cleBis'];
+    require('view/encryption.php');
+}
 function listTrends()
 {
     $posts = getTrends();
@@ -37,9 +44,10 @@ function listTrends()
 }
 
 function listTrendsK(){
-    $posts = getDreams();
-    $key = $_GET['key'];
-    require('view/dreamPostViewK.php');
+    session_start();
+    $posts = getTrends();
+    $key =  $_SESSION['Kles']['cle'];
+    require('view/listPostViewK.php');
 }
 
 function listDreams()
@@ -50,7 +58,7 @@ function listDreams()
 
 function listDreamsK(){
     $posts = getDreams();
-    $key = $_GET['key'];
+    $key =  $_SESSION['Kles']['cle'];
     require('view/listDreamViewK.php');
 }
 
@@ -67,7 +75,7 @@ function postK()
     $lastPost=$_GET['id']-1;
     $nextPost=$_GET['id']+1;
     $post = getTrend($_GET['id']);
-    $key = $_GET['key'];
+    $key =  $_SESSION['Kles']['cle'];
     require('view/postViewK.php');
 }
 
@@ -84,7 +92,7 @@ function dreamK()
     $lastDream=$_GET['id']-1;
     $nextDream=$_GET['id']+1;
     $post = getDream($_GET['id']);
-    $key = $_GET['key'];
+    $key =  $_SESSION['Kles']['cle'];
     require('view/dreamViewK.php');
 }
 

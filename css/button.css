@@ -11,7 +11,8 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-  }
+    background-color: linen;
+}
 
 button {
     outline: none;
@@ -19,51 +20,7 @@ button {
     margin-bottom:10px;
 }
 
-.btnFx {
-    position: relative;
-    color: #000;
-    z-index: 2;
-    line-height: 40px;
-    padding: 0;
-}
-
-.btnFx:hover{
-    border: none;
-}
-  .btnFx:before,
-  .btnFx:after {
-    position: absolute;
-    content: "";
-    width: 0%;
-    height: 0%;
-    border: 2px solid;
-    z-index: -1;
-    transition: all 0.3s ease;
-  }
-  .btnFx:before {
-    top: 0;
-     left: 0;
-     border-bottom-color: transparent;
-     border-right-color: transparent;
-     border-top-color: #000;
-     border-left-color: #000;
-  }
-  .btnFx:after{
-     bottom: 0;
-     right: 0;
-     border-top-color: transparent;
-     border-left-color: transparent;
-     border-bottom-color: #000;
-     border-right-color: #000;
-  }
-  .btnFx:hover:before,
-  .btnFx:hover:after {
-    border-color: #000;
-    height: 100%;
-    width: 100%;
-  }
-  
 .active
 {
-    background: rgba(255, 255, 255, 0.918);
+ 
 }

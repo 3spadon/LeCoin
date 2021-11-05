@@ -6,10 +6,13 @@ needLogin();
 try{
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'view') {
-                displayAccount(); 
+            displayAccount(); 
         }
         elseif ($_GET['action'] == 'changePassword') {
-                displayChangePassword();
+            displayChangePassword();
+        }
+        elseif ($_GET['action'] == 'Chiffrement') {
+            displayEncryption();
         }
     }
     else {

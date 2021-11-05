@@ -32,6 +32,22 @@ function formLogin($username,$password)
     }
 }
 
+function getKey($username)
+{
+    $db = dbConnect();
+    $req = $db->prepare('SELECT cle,cleBis FROM users WHERE `username` = ?');
+    $req->execute(array($username));
+    $cleChiffrement = $req->fetch();
+    if($cleChiffrement)
+    {
+        return $cleChiffrement;
+    }
+    else
+    {
+        throw new Exception("Can't get key from database.");
+    }
+}
+
 function getTrends()
 {
     $db = dbConnect();

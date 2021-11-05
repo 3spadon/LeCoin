@@ -7,16 +7,17 @@
         <h1><i class="fas fa-user-cog icon"></i>Gérer mon compte utilisateur</h1>
     </div>
     <div id='nav_account'>
-        <a href='account.php?action=view'><button class="custom-btn btnFx active">Informations</button></a>
-        <a href='account.php?action=changePassword'><button class="custom-btn btnFx">Mot de passe</button></a>
-        <a href='account.php?action=Chiffrement'><button class="custom-btn btnFx">Chiffrement</button></a>
+        <a href='account.php?action=view'><button class="custom-btn active">Informations</button></a>
+        <a href='account.php?action=changePassword'><button class="custom-btn">Identification</button></a>
+        <a href='account.php?action=Chiffrement'><button class="custom-btn">Chiffrement</button></a>
     </div>
     <div id="main_content">
         <div id="usernameTitle">
             <img id="userCircleIcon" src='img/user.png' alt='user_circle_icon'><h2 id="username"><?=$_SESSION['auth']['username']?></h2>
         </div>
         <div id="boxContent">
-            <p id="lastConnection">Dernière connexion:</p>
+           <p id='lastConnection'>Dernière connexion:</p>
+           <p id='inscription'>Inscrit depuis:</p>
         </div>
     </div>
 </div>
